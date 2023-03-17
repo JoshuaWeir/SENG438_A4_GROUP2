@@ -460,6 +460,92 @@ public class DataUtilitiesTest extends DataUtilities {
 
 	}
 	
+	//MUTATION NEW
+	
+	@Test(expected = IllegalArgumentException.class)
+	public void cloneNullArray() {
+		double [][] src = null;
+		double [][] clone = DataUtilities.clone(src);
+		assertArrayEquals(src, clone);
+	}
+	
+	@Test
+	public void cloneOneElementNull() {
+		double [][] src = {{1,2,3,4,5}, null, 
+				{1,3,5,7,9}, {2,4,6,8,0}, {1,4,7,0,3}};
+		double [][] clone = DataUtilities.clone(src);
+		assertArrayEquals(src, clone);
+	}
+	
+	@Test(expected = IllegalArgumentException.class)
+	public void invalidNullValueProvided() {
+			double[][] data = null;
+			Number[][] returned = DataUtilities.createNumberArray2D(data);
+		assertArrayEquals("Invalid data provided exception was not thrown.",
+				data, returned);
+	}
+	
+	@Test
+	public void correctValuesInDoubleArray() {
+		double[] dArray = new double[] {1.2,3.4,5.5,9.6};
+		double[] oldArray = new double[] {1.2,3.4,5.5,9.6};
+		Number[] newArray = DataUtilities.createNumberArray(dArray);
+		assertArrayEquals("Double array should have same values after use of function.", oldArray, dArray, 0.0000001d);
+	}
+	
+	@Test(expected = IllegalArgumentException.class)
+    public void testNullValues() {
+        double result = DataUtilities.calculateRowTotal(null,0);
+        assertEquals("Result should be 0", 0, result, .000000001d);
+    }
+	
+	@Test
+	public void testRowTotalOneNull() {
+		Mockery mock = new Mockery();
+        final Values2D example = mock.mock(Values2D.class);
+        mock.checking(new Expectations() {
+            {
+                one(example).getColumnCount();
+                will(returnValue(4));
+                
+                one(example).getValue(0, 0);
+                will(returnValue(null));
+                
+                one(example).getValue(0, 1);
+                will(returnValue(0.5));
+                
+                one(example).getValue(0, 2);
+                will(returnValue(0.5));
+                
+                one(example).getValue(0, 3);
+                will(returnValue(2.5));
+            }
+        });
+        double result = DataUtilities.calculateRowTotal(example,0);
+        assertEquals("Result should be 3.5", 3.5, result, .000000001d);
+	}
+	
+	@Test
+	public void sumColumnZeroWithValidRows() {
+		int[] rows = new int[] {0,1};
+		assertEquals("Sum of column 0 should be 7.", 7, DataUtilities.calculateColumnTotal(mockValues, 0, rows), 0.000000001d);
+	}
+	@Test
+	public void sumColumnOneWithValidRows() {
+		int[] rows = new int[] {0,1};
+		assertEquals("Sum of column 1 should be 14.", 14, DataUtilities.calculateColumnTotal(mockValues, 1, rows), 0.000000001d);
+	}
+	@Test
+	public void nullTableWithValidRows() {
+		int[] rows = new int[] {0,1};
+		try {
+			DataUtilities.calculateColumnTotal(null, 0, rows);
+		}
+		catch(IllegalArgumentException e) {
+			//works as intended if exception is thrown
+		}
+	}
+	
 	
 	
 	@After
