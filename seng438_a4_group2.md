@@ -35,8 +35,18 @@ we start a recording in selenium and perform the steps again. Finally, we execut
 verify that no errors were present.
 
 # Explain the use of assertions and checkpoints
-
+We used verification checkpoints and assertions in order to verify that the test is running as it should. We did that by testing what page the site is currently on or the contents of the current page. This is an important feature as it saves time in case you are on an incorrect page so you don’t have to continue. We used a combination of both verification and assertion checkpoints and mainly to check certain texts to make sure you are on the right page or the feature that was selected did the right thing.
 # How did you test each functionaity with different test data
+We tested the following functionalities.
+1.	Logging in
+2.	Search bar
+3.	Change language
+4.	Redirecting to Amazon main page
+5.	Customer service button
+6.	Sort
+7.	Region
+8.	Sign out
+For different test data for the logging in, we signed in with correct data and then signed in with incorrect data and got different results by doing so. For the region, we tested different countries to make sure that the feature works properly. In Addition, we did a similar test for language. We changed the language in order to make sure that the feature works as it should. To test for sorting feature, we tested sorting high to low and low to high. 
 
 # Discuss advantages and disadvantages of Selenium vs. Sikulix
 
