@@ -30,7 +30,7 @@
 
 # Explain the use of assertions and checkpoints
 
-# how did you test each functionaity with different test data
+# How did you test each functionaity with different test data
 
 # Discuss advantages and disadvantages of Selenium vs. Sikulix
 
