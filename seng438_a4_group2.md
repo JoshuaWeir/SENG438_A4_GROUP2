@@ -28,6 +28,12 @@
 
 # Explain your SELENUIM test case design process
 
+We would go explore the amazon website seacrhing for good functionality to test. After determining a 
+function to test we would explore what elements are different on each screen to choose what to use as
+our validation point. From there we would do a dry run of the steps do perform that test. Afterwards, 
+we start a recording in selenium and perform the steps again. Finally, we executed the test a few times to
+verify that no errors were present.
+
 # Explain the use of assertions and checkpoints
 
 # How did you test each functionaity with different test data
