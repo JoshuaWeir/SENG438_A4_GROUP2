@@ -16,6 +16,37 @@ public class RangeTest {
 	demoRange = new Range (-5,5); 
 	nullRange = null;
     }
+    
+    //ctor tests
+    @Test
+    public void testCorrectLowerBound() {
+    	assertEquals("Test lower bound on range", -5, demoRange.getLowerBound(), .000000001d);
+    }
+    
+    @Test
+    public void testCorrectUpperBound() {
+    	assertEquals("Test lower bound on range", 5, demoRange.getUpperBound(), .000000001d);
+    }
+    
+    @Test
+    public void testLowerGreaterThanUpper() {
+    	try {
+    		Range r = new Range(5,2);
+    		fail("No constructor exception thrown");
+    	} catch(IllegalArgumentException e) {
+    	}
+    }
+    
+    @Test
+    public void testCtorExceptionMessage() {
+    	String expectedMsg = "Range(double, double): require lower (5.0) <= upper (2.0).";
+    	try {
+    		Range r = new Range(5,2);
+    		fail("No constructor exception thrown");
+    	} catch(IllegalArgumentException e) {
+    		assertTrue("Test exception message", expectedMsg.equals(e.getMessage()));
+    	}
+    }
 
     @Test
     public void firstNullValueGiven() {
@@ -175,6 +206,14 @@ public class RangeTest {
 	}
 	
 	//intersects() tests
+	@Test
+	public void testLowerIteration() {
+		assertTrue("Unwanted iteration.", demoRange.getLowerBound() == -5);
+	}
+	@Test
+	public void testUpperIteration() {
+		assertTrue("Unwanted iteration.", demoRange.getUpperBound() == 5);
+	}
 	@Test
 	public void intersectLowerBound() {
 		assertTrue("Range should overlap on lower bound.",demoRange.intersects(-10, -5));
@@ -342,6 +381,20 @@ public class RangeTest {
 	//Tests for getCentralValue
 	
 	@Test
+	public void preventLowerIteration() {
+		Range r = new Range(1,2);
+		r.getCentralValue();
+		assertTrue("Test Iterative Mutants", (r.getLowerBound() == 1));
+	}
+	
+	@Test
+	public void preventUpperIteration() {
+		Range r = new Range(1,2);
+		r.getCentralValue();
+		assertTrue("Test Iterative Mutants", (r.getUpperBound() == 2));
+	}
+	
+	@Test
 	public void getCentralValueTest() {
 		Range r = new Range(1,2);
 		double expected = 1.5;
@@ -492,6 +545,20 @@ public class RangeTest {
     	assertEquals("Result range should be demoRange.", demoRange, actual);
     }
 	
+	@Test
+	public void preventLowerNaNIteration() {
+		Range r = new Range(1,2);
+		r.isNaNRange();
+		assertTrue("Test Iterative Mutants", (r.getLowerBound() == 1));
+	}
+	
+	@Test
+	public void preventUpperNaNIteration() {
+		Range r = new Range(1,2);
+		r.isNaNRange();
+		assertTrue("Test Iterative Mutants", (r.getUpperBound() == 2));
+	}
+	
 	//tests for expand with margins
 	
 	@Test
@@ -508,8 +575,7 @@ public class RangeTest {
 		Range actual = Range.expand(evenTen, -1.1, 0);
 		Range expected = new Range(11,11);
 		assertEquals("New Range should be (11,11) after adding margins.",expected,actual);
-	}
-	
+	}	
 
 
     @After
