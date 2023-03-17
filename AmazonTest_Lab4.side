@@ -1,0 +1,449 @@
+{
+  "id": "c353baa1-84ce-4cfe-952c-c497dc7351d2",
+  "version": "2.0",
+  "name": "AmazonTest_Lab4",
+  "url": "https://www.amazon.ca",
+  "tests": [{
+    "id": "26fef34d-4c1d-4be1-a386-0f0397311bd8",
+    "name": "Untitled",
+    "commands": []
+  }, {
+    "id": "4df87143-267b-45d9-ab85-43456e991945",
+    "name": "Test Search Bar",
+    "commands": [{
+      "id": "8428af20-3668-4012-8c06-de409bfdecbb",
+      "comment": "",
+      "command": "open",
+      "target": "/?tag=hydcaabkm-20&ref=pd_sl_3y5m370dqb_e&adgrpid=1353499042514485&hvadid=84594210543295&hvnetw=o&hvqmt=e&hvbmt=be&hvdev=c&hvlocint=&hvlocphy=5026&hvtargid=kwd-84593859806898:loc-32&hydadcr=11825_13380662",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cac32b45-824f-4fd0-ab0e-14d75c8e243a",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "764x801",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0d2d7359-55b2-43c7-b1f8-9f026099989b",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=Customer Service",
+      "targets": [
+        ["linkText=Customer Service", "linkText"],
+        ["css=.nav-a:nth-child(5)", "css:finder"],
+        ["xpath=//a[contains(text(),'Customer Service')]", "xpath:link"],
+        ["xpath=//div[@id='nav-xshop']/a[4]", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/gp/help/customer/display.html?ref_=nav_cs_help')]", "xpath:href"],
+        ["xpath=//div[2]/div/a[4]", "xpath:position"],
+        ["xpath=//a[contains(.,'Customer Service')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "081594c9-9ecf-4029-8e5d-be4d791d9be5",
+      "comment": "",
+      "command": "click",
+      "target": "id=twotabsearchtextbox",
+      "targets": [
+        ["id=twotabsearchtextbox", "id"],
+        ["name=field-keywords", "name"],
+        ["css=#twotabsearchtextbox", "css:finder"],
+        ["xpath=//input[@id='twotabsearchtextbox']", "xpath:attributes"],
+        ["xpath=//form[@id='nav-search-bar-form']/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e6a8b43e-a7fc-4119-a042-3fb94314bbab",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "id=nav-search-submit-button",
+      "targets": [
+        ["id=nav-search-submit-button", "id"],
+        ["css=#nav-search-submit-button", "css:finder"],
+        ["xpath=//input[@id='nav-search-submit-button']", "xpath:attributes"],
+        ["xpath=//span[@id='nav-search-submit-text']/input", "xpath:idRelative"],
+        ["xpath=//span/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "893f7684-d184-45f2-ae20-8c923ff23082",
+      "comment": "",
+      "command": "type",
+      "target": "id=twotabsearchtextbox",
+      "targets": [
+        ["id=twotabsearchtextbox", "id"],
+        ["name=field-keywords", "name"],
+        ["css=#twotabsearchtextbox", "css:finder"],
+        ["xpath=//input[@id='twotabsearchtextbox']", "xpath:attributes"],
+        ["xpath=//form[@id='nav-search-bar-form']/div[2]/div/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": "Video Games"
+    }, {
+      "id": "29762505-0fbf-487f-b415-a93dbaea9518",
+      "comment": "",
+      "command": "click",
+      "target": "id=nav-search-submit-button",
+      "targets": [
+        ["id=nav-search-submit-button", "id"],
+        ["css=#nav-search-submit-button", "css:finder"],
+        ["xpath=//input[@id='nav-search-submit-button']", "xpath:attributes"],
+        ["xpath=//span[@id='nav-search-submit-text']/input", "xpath:idRelative"],
+        ["xpath=//span/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3b9fb458-09b4-41d4-8e30-8f5b302d682d",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.\\_YXV0b_gridColumn_2Jfab:nth-child(2) .\\_YXV0b_image_1pfbQ",
+      "targets": [
+        ["css=.\\_YXV0b_gridColumn_2Jfab:nth-child(2) .\\_YXV0b_image_1pfbQ", "css:finder"],
+        ["xpath=//img[@alt='KIDS SMARTWATCHES']", "xpath:img"],
+        ["xpath=//div[@id='CardInstance5QZkMXaCs_cBXMr-5UIRHA']/div/div/div[2]/div/div[2]/div[2]/div/a/div/img", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div/a/div/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "14995008-4027-4aff-82ab-0fd7ce4e6900",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.\\_YXV0b_gridColumn_2Jfab:nth-child(2) .\\_YXV0b_image_1pfbQ",
+      "targets": [
+        ["css=.\\_YXV0b_gridColumn_2Jfab:nth-child(2) .\\_YXV0b_image_1pfbQ", "css:finder"],
+        ["xpath=//img[@alt='KIDS SMARTWATCHES']", "xpath:img"],
+        ["xpath=//div[@id='CardInstance5QZkMXaCs_cBXMr-5UIRHA']/div/div/div[2]/div/div[2]/div[2]/div/a/div/img", "xpath:idRelative"],
+        ["xpath=//div[2]/div[2]/div/a/div/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9f76892b-1542-4177-992c-448c885ae3a5",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,1)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7a2543fb-9e67-467b-a0be-0a759f7b964d",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.a-color-state",
+      "targets": [
+        ["css=.a-color-state", "css:finder"],
+        ["xpath=//div[@id='search']/span/div/h1/div/div/div/div/span[3]", "xpath:idRelative"],
+        ["xpath=//div/span[3]", "xpath:position"]
+      ],
+      "value": "\"Video Games\""
+    }, {
+      "id": "6595f97d-1ef3-4020-be5e-72e166efd300",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "28f051f1-9867-4967-b666-0d0c42a958a1",
+    "name": "Test Add To Cart",
+    "commands": []
+  }, {
+    "id": "8a732e80-8d59-4a79-94ae-39addffbe85c",
+    "name": "Test Change Language English",
+    "commands": [{
+      "id": "13022ab0-30d6-48ad-a405-2fa0479a12e0",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c61c842f-b48e-4f1a-baf9-30b73da5db33",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1920x1080",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "04f9a166-c978-45e2-95fa-261ff70daa83",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=.hm-icon-label",
+      "targets": [
+        ["css=.hm-icon-label", "css:finder"],
+        ["xpath=//a[@id='nav-hamburger-menu']/span", "xpath:idRelative"],
+        ["xpath=//div[4]/div/a/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a4a0b13e-d848-4644-8194-375d8711699f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.hm-icon-label",
+      "targets": [
+        ["css=.hm-icon-label", "css:finder"],
+        ["xpath=//a[@id='nav-hamburger-menu']/span", "xpath:idRelative"],
+        ["xpath=//div[4]/div/a/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "729415c2-87d6-46d0-8ae1-b0f4ad4c2b5a",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.hm-icon-label",
+      "targets": [
+        ["css=.hm-icon-label", "css:finder"],
+        ["xpath=//a[@id='nav-hamburger-menu']/span", "xpath:idRelative"],
+        ["xpath=//div[4]/div/a/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cf5f6125-db2d-43df-b402-defc410adccf",
+      "comment": "",
+      "command": "click",
+      "target": "id=hmenu-icp-language",
+      "targets": [
+        ["id=hmenu-icp-language", "id"],
+        ["linkText=Français", "linkText"],
+        ["css=#hmenu-icp-language", "css:finder"],
+        ["xpath=//a[contains(text(),'Français')]", "xpath:link"],
+        ["xpath=//a[@id='hmenu-icp-language']", "xpath:attributes"],
+        ["xpath=//div[@id='hmenu-content']/ul/li[31]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/-/fr/customer-preferences/edit/?preferencesReturnUrl=%2F&ref_=nav_em_mozart_0_1_1_39')]", "xpath:href"],
+        ["xpath=//li[31]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "bb9426ec-cce6-4c07-b881-116ba36488e4",
+      "comment": "",
+      "command": "click",
+      "target": "css=.a-row:nth-child(4) > .a-radio .a-icon",
+      "targets": [
+        ["css=.a-row:nth-child(4) > .a-radio .a-icon", "css:finder"],
+        ["xpath=//div[@id='icp-language-settings']/div[2]/div/label/i", "xpath:idRelative"],
+        ["xpath=//label/i", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4fad4911-1dd0-48e7-b951-ee0558d466c9",
+      "comment": "",
+      "command": "click",
+      "target": "css=#icp-save-button .a-button-input",
+      "targets": [
+        ["css=#icp-save-button .a-button-input", "css:finder"],
+        ["xpath=(//input[@type='submit'])[3]", "xpath:attributes"],
+        ["xpath=//span[@id='icp-save-button']/span/input", "xpath:idRelative"],
+        ["xpath=//span[2]/span/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e15c62be-5888-4bff-b607-311fa3728cfc",
+      "comment": "",
+      "command": "click",
+      "target": "css=.hm-icon",
+      "targets": [
+        ["css=.hm-icon", "css:finder"],
+        ["xpath=//a[@id='nav-hamburger-menu']/i", "xpath:idRelative"],
+        ["xpath=//a/i", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9f8163c4-ad0b-4c71-9ace-75202c7fb53e",
+      "comment": "",
+      "command": "click",
+      "target": "id=hmenu-icp-language",
+      "targets": [
+        ["id=hmenu-icp-language", "id"],
+        ["linkText=English", "linkText"],
+        ["css=#hmenu-icp-language", "css:finder"],
+        ["xpath=//a[contains(text(),'English')]", "xpath:link"],
+        ["xpath=//a[@id='hmenu-icp-language']", "xpath:attributes"],
+        ["xpath=//div[@id='hmenu-content']/ul/li[31]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/customer-preferences/edit/?preferencesReturnUrl=%2F&ref_=nav_em_mozart_0_1_1_39')]", "xpath:href"],
+        ["xpath=//li[31]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8f44531c-d0b0-4a4f-b6b8-45af8d54da61",
+      "comment": "",
+      "command": "click",
+      "target": "css=.a-row:nth-child(32)",
+      "targets": [
+        ["css=.a-row:nth-child(32)", "css:finder"],
+        ["xpath=//div[@id='a-page']/div[2]", "xpath:idRelative"],
+        ["xpath=//body/div/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c7e41505-4f79-4121-9ea0-b0e1fb0d15fe",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=icp-language-heading",
+      "targets": [
+        ["id=icp-language-heading", "id"],
+        ["css=#icp-language-heading", "css:finder"],
+        ["xpath=//h3[@id='icp-language-heading']", "xpath:attributes"],
+        ["xpath=//div[@id='icp-language-headings']/h3", "xpath:idRelative"],
+        ["xpath=//h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'Language settings')]", "xpath:innerText"]
+      ],
+      "value": "Language settings"
+    }, {
+      "id": "1658b8cb-8330-4e39-ab10-d17ae28e9197",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "02af65b3-7623-44f3-8170-4f6e32e9738e",
+    "name": "Test Change Language French",
+    "commands": [{
+      "id": "a6f8d9d8-2483-4b37-9ab5-db9a375ce70e",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c379a737-71cd-4d64-a160-bd533a331273",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1920x1080",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6d68399c-6e36-4252-a8a1-d61c8fdb874e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.hm-icon",
+      "targets": [
+        ["css=.hm-icon", "css:finder"],
+        ["xpath=//a[@id='nav-hamburger-menu']/i", "xpath:idRelative"],
+        ["xpath=//a/i", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "af144713-f589-42b9-87b8-f39d1281ede8",
+      "comment": "",
+      "command": "click",
+      "target": "id=hmenu-icp-language",
+      "targets": [
+        ["id=hmenu-icp-language", "id"],
+        ["linkText=English", "linkText"],
+        ["css=#hmenu-icp-language", "css:finder"],
+        ["xpath=//a[contains(text(),'English')]", "xpath:link"],
+        ["xpath=//a[@id='hmenu-icp-language']", "xpath:attributes"],
+        ["xpath=//div[@id='hmenu-content']/ul/li[31]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/customer-preferences/edit/?preferencesReturnUrl=%2F&ref_=nav_em_mozart_0_1_1_39')]", "xpath:href"],
+        ["xpath=//li[31]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "12391395-ba3c-46b7-9747-c8b0e991b1d3",
+      "comment": "",
+      "command": "click",
+      "target": "css=.a-row:nth-child(6) .a-icon",
+      "targets": [
+        ["css=.a-row:nth-child(6) .a-icon", "css:finder"],
+        ["xpath=//div[@id='icp-language-settings']/div[3]/div/label/i", "xpath:idRelative"],
+        ["xpath=//div[3]/div/label/i", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c8b48ed3-4944-4ceb-93da-e74fdfd326b3",
+      "comment": "",
+      "command": "click",
+      "target": "css=#icp-save-button .a-button-input",
+      "targets": [
+        ["css=#icp-save-button .a-button-input", "css:finder"],
+        ["xpath=(//input[@type='submit'])[3]", "xpath:attributes"],
+        ["xpath=//span[@id='icp-save-button']/span/input", "xpath:idRelative"],
+        ["xpath=//span[2]/span/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "57d2e46a-8f26-40b8-8907-b35d3d52dc2c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.hm-icon-label",
+      "targets": [
+        ["css=.hm-icon-label", "css:finder"],
+        ["xpath=//a[@id='nav-hamburger-menu']/span", "xpath:idRelative"],
+        ["xpath=//div[4]/div/a/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e10b2ca6-f903-4b8c-860d-60130b959bf4",
+      "comment": "",
+      "command": "click",
+      "target": "id=hmenu-icp-language",
+      "targets": [
+        ["id=hmenu-icp-language", "id"],
+        ["linkText=Français", "linkText"],
+        ["css=#hmenu-icp-language", "css:finder"],
+        ["xpath=//a[contains(text(),'Français')]", "xpath:link"],
+        ["xpath=//a[@id='hmenu-icp-language']", "xpath:attributes"],
+        ["xpath=//div[@id='hmenu-content']/ul/li[31]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/-/fr/customer-preferences/edit/?preferencesReturnUrl=%2F&ref_=nav_em_mozart_0_1_1_39')]", "xpath:href"],
+        ["xpath=//li[31]/a", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d38d66c5-c7be-4e5d-9b19-34ff430d719f",
+      "comment": "",
+      "command": "click",
+      "target": "css=.a-row:nth-child(32)",
+      "targets": [
+        ["css=.a-row:nth-child(32)", "css:finder"],
+        ["xpath=//div[@id='a-page']/div[2]", "xpath:idRelative"],
+        ["xpath=//body/div/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "993236de-b3a8-432b-95ca-311457c743aa",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=icp-language-heading",
+      "targets": [
+        ["id=icp-language-heading", "id"],
+        ["css=#icp-language-heading", "css:finder"],
+        ["xpath=//h3[@id='icp-language-heading']", "xpath:attributes"],
+        ["xpath=//div[@id='icp-language-headings']/h3", "xpath:idRelative"],
+        ["xpath=//h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'Paramètres de langue')]", "xpath:innerText"]
+      ],
+      "value": "Paramètres de langue"
+    }, {
+      "id": "d27fbd80-07fd-4099-a8c9-117919f1f7f9",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "css=#anonCarousel1 .a-carousel-card:nth-child(4) .a-dynamic-image",
+      "targets": [
+        ["css=#anonCarousel1 .a-carousel-card:nth-child(4) .a-dynamic-image", "css:finder"],
+        ["xpath=//img[@alt='Lot de 2 étuis étanches universels IPX8, compatibles avec iPhone 13/13Pro/12/8Plus, Galaxy S22 S20 S10 S9 Google Pixel 2 HTC ']", "xpath:img"],
+        ["xpath=//div[@id='anonCarousel1']/ol/li[4]/div/a/div/img", "xpath:idRelative"],
+        ["xpath=//li[4]/div/a/div/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "717669d4-c0dc-4f38-a5fb-7647e8304afb",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "0ab8be79-bd9e-4cef-9b6e-9ca8462dd674",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["26fef34d-4c1d-4be1-a386-0f0397311bd8"]
+  }],
+  "urls": ["https://www.amazon.ca/"],
+  "plugins": []
+}
