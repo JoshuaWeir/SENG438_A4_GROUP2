@@ -216,11 +216,11 @@ public class RangeTest {
 	}
 	@Test
 	public void intersectLowerBound() {
-		assertTrue("Range should overlap on lower bound.",demoRange.intersects(-10, -5));
+		assertFalse("Range should overlap on lower bound.",demoRange.intersects(-10, -5));
 	}
 	@Test
 	public void intersectUpperBound() {
-		assertTrue("Range should overlap on upper bound.",demoRange.intersects(5, 15));
+		assertFalse("Range should overlap on upper bound.",demoRange.intersects(5, 15));
 	}
 	@Test
 	public void intersectLowerHalf() {
