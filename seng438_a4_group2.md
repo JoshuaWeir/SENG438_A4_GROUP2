@@ -16,6 +16,48 @@ In Part 1, we will mutation test our existing test suites for Range and DataUtil
 
 
 # Analysis of 10 Mutants of the Range class 
+<strong>Mutant 1</strong><br>
+Line: 176 in intersects(Range range)<br>
+Original Code: return intersects(range.getLowerBound(), range.getUpperBound());<br>
+Mutated Code: return true;<br>
+Mutant Status: SURVIVED<br>
+Summary: This mutant survived because the two tests that test that
+function test ranges that overlap with the demoRange thus changing the outcome to true will not change the output of the tests.<br><br>
+
+<strong>Mutant 2</strong><br>
+Line: 197 in constrain(double value)<br>
+Original Code: return result;<br>
+Mutated Code: return (result++);<br>
+Mutant Status: SURVIVED<br>
+Summary: This mutant survived because it incremented the value after it was
+already returned thus the tests for that function didn't test what happened to the variables after the value was returned
+and thus couldn't kill the mutant.<br><br>
+
+<strong>Mutant 3</strong><br>
+Line: 197 in constrain(double value)<br>
+Original Code: return result;<br>
+Mutated Code: return (result--);<br>
+Mutant Status: SURVIVED<br>
+Summary: Much like the previous mutant this mutant survived because
+the tests do not check if the variables are correct after a value was already returned.<br><br>
+
+<strong>Mutant 4</strong><br>
+Line: 409 in scale(Range base, double factor)<br>
+Original Code: ParamChecks.nullNotPermitted(base, "base");<br>
+Mutated Code: Removed the function call<br>
+Mutant Status: SURVIVED<br>
+Summary: This mutant survived because the tests for scale never pass along a null range thus the call to nullNotPermitted is not
+needed in them and if removed won't be noticed.<br><br>
+
+<strong>Mutant 5</strong><br>
+Line: 475 in toString()<br>
+Original Code: return ("Range[" + this.lower + "," + this.upper + "]");<br>
+Mutated Code: return ("Range[" + (this.lower++) + "," + this.upper + "]");<br>
+Mutant Status: SURVIVED<br>
+Summary: This mutant survived because it only incremented the value after it
+was used to make the string, since none of our tests test the values of the range used in the function after the function
+was executed the mutant is never killed.<br><br>
+
 <strong>Mutant 6</strong><br>
 Line: 123 in getLength()<br>
 Original Code: return this.upper - this.lower;<br>
