@@ -70,7 +70,7 @@ Line: 132 in getCentralValue()<br>
 Original Code: return this.lower / 2.0 + this.upper / 2.0;<br>
 Mutated Code: return this.lower / 1.0 + this.upper / 2.0;<br>
 Mutant Status: KILLED<br>
-Summary: This mutant test still accurately fails because the expected central value can be harded in the unit test. This mutation essentially equates to incorrect math, and its failure means the test would catch such a bug.<br><br>
+Summary: This mutant test still accurately fails because the expected central value can be hard-coded in the unit test. This mutation essentially equates to incorrect math, and its failure means the test would catch such a bug.<br><br>
 
 <strong>Mutant 8</strong><br>
 Line: 114 in getUpperBound()<br>
