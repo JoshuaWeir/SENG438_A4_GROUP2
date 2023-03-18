@@ -12,7 +12,7 @@
 # Introduction
 
 This lab has two parts. Part 1 focuses on mutation testing using a previously developed test suite and Part 2 explores GUI testing using record and replay tools. 
-In Part 1, we will mutation test our existing test suites for Range and DataUtilities. We will then analyze the results and develop additional test cases to imrpove mutation coverage by killing the surviving mutants. In Part 2, we will develop test cases for different functionalites on the Amazon website.
+In Part 1, we will mutation test our existing test suites for Range and DataUtilities. We will then analyze the results and develop additional test cases to improve mutation coverage by killing the surviving mutants. In Part 2, we will develop test cases for different functionalites on the Amazon website.
 
 
 # Analysis of 10 Mutants of the Range class 
