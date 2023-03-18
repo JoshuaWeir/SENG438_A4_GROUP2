@@ -61,7 +61,7 @@ was executed the mutant is never killed.<br><br>
 <strong>Mutant 6</strong><br>
 Line: 123 in getLength()<br>
 Original Code: return this.upper - this.lower;<br>
-Mutated Code:	retrun this.upper + this.lower;<br>
+Mutated Code: return this.upper + this.lower;<br>
 Mutant Status: KILLED<br>
 Summary: All the unit test for the method getLength() use test cases that have unique values when the lower bound is subtracted from the upper bound. The most important consideration is that lower != 0 because upper - 0 == upper + 0.<br><br>
 
@@ -84,7 +84,7 @@ Line: 144 in contains()<br>
 Original Code: return (value >= this.lower && value <= this.upper);<br>
 Mutated Code: return (value >= this.lower && value == this.upper);<br>
 Mutant Status: KILLED<br>
-Summary: If the unit test expected value is true (input is contained in range), but not the input is not equal to the upper bound, then this mutation will return false. This fails the test and kills the mutation.<br><br>
+Summary: If the unit test expected value is true (input is contained in range), but the input is not equal to the upper bound, then this mutation will return false. This fails the test and kills the mutation.<br><br>
 
 <strong>Mutant 10</strong><br>
 Line: 217 in combine();<br>
@@ -116,13 +116,13 @@ Equivalent mutations had a detrimental effect on our mutation coverage, thus mak
 
 # A discussion of what could have been done to improve the mutation score of the test suites
 
-To improve our test suites' mutation scores, we developed specific test cases that targetted certain mutations. For example, consider the method Range.getCentralValue():
+To improve our test suites' mutation scores, we developed specific test cases that targeted certain mutations. For example, consider the method Range.getCentralValue():
  ```
      public double getCentralValue() {
         return this.lower / 2.0 + this.upper / 2.0;
     }
 ```
-A mutation present in this method was to increment and decrement the local variables (this.lower and this.upper). Because our previous test cases only focused on the return of the function and not the fucntion's affect on the object, these mutations survived. To kill these mutants, we developed unit tests that targetted the fucntion's affect on the object, not the function's return value: 
+A mutation present in this method was to increment and decrement the local variables (this.lower and this.upper). Because our previous test cases only focused on the return of the function and not the function's effect on the object, these mutations survived. To kill these mutants, we developed unit tests that targetted the fucntion's effect on the object, not the function's return value: 
 ```
 	@Test
 	public void preventLowerIteration() {
@@ -139,18 +139,18 @@ A mutation present in this method was to increment and decrement the local varia
 	}
 ```
 
-Another method we used was changing our unit test inputs. When increasing the mutation coverage, it is crucial to be intentional about the input values. For example, consider Range.getCentralValue() again. If the test range was [-1,0] for example, the a mutation that changes the sign of the function's arithmetic would not fail because (-1/2 + 0/2) == (-1/2 - 0/2).
+Another method we used was changing our unit test inputs. When increasing the mutation coverage, it is crucial to be intentional about the input values. For example, consider Range.getCentralValue() again. If the test range was [-1,0] for example, then a mutation that changes the sign of the function's arithmetic would not fail because (-1/2 + 0/2) == (-1/2 - 0/2) therefore we should change the upper value to something other than zero to kill the mutant.
  
 
 # Why do we need mutation testing? Advantages and disadvantages of mutation testing
 
-Mutation testing tests the quality of the tests, not necessarily the quality of the code. The goal of mutation testing is to evaluate a test suite's ability to detect bugs; if the mutation coverage is poor, than the tests will not be effective when testing the source code. The biggest advantage to mutation testing is that it promotes targetted test cases that are of high quality.
+Mutation testing tests the quality of the tests, not necessarily the quality of the code. The goal of mutation testing is to evaluate a test suite's ability to detect bugs; if the mutation coverage is poor, than the tests will not be effective when testing the source code. The biggest advantage to mutation testing is that it promotes targeted test cases that are of high quality.
 
-There are some disadvantages of mutations include. First, the mutation-killing test cases are sometimes difficult to develop, meaning a time comnsuimng test-writing process. Additionally, the actual running of the mutation test are computationally and temporally expensive because a large number of inputs and mutations are tested.
+There are some disadvantages to using mutations, these include; First, the mutation-killing test cases are sometimes difficult to develop, meaning a time consuming test-writing process. Additionally, the actual running of the mutation test are computationally and temporally expensive because a large number of inputs and mutations are tested.
 
 # Explain your SELENUIM test case design process
 
-We would go explore the Amazon website seacrhing for effective functionalities to test. After determining a function to test, we would explore what elements differed on each screen, so we could choose what we wanted to use as our validation points. From there we would do a dry run of the steps to perform that test. Afterwards, we eould start a recording in Selenium and perform the steps again. Finally, we executed the test a few times to verify that no errors were present.
+We would go explore the Amazon website searching for effective functionalities to test. After determining a function to test, we would explore what elements differed on each screen, so we could choose what we wanted to use as our validation points. From there we would do a dry run of the steps to perform that test. Afterwards, we would start a recording in Selenium and perform the steps again. Finally, we executed the test a few times to verify that no errors were present.
 
 # Explain the use of assertions and checkpoints
 
@@ -167,7 +167,7 @@ We tested the following functionalities.
 6.	Sort
 7.	Region
 8.	Sign out<br>
-For different test data for the logging in, we signed in with correct data and then signed in with incorrect data and got different results by doing so. For the region, we tested different countries to make sure that the feature works properly. In Addition, we did a similar test for language. We changed the language in order to make sure that the feature works as it should. To test for sorting feature, we tested sorting high to low and low to high. 
+For different test data for the logging in, we signed in with correct data and then signed in with incorrect data and got different results by doing so. For the region, we tested different countries to make sure that the feature works properly. In addition, we did a similar test for language. We changed the language in order to make sure that the feature works as it should. To test for sorting feature, we tested sorting high to low and low to high. 
 
 # Discuss advantages and disadvantages of Selenium vs. Sikulix
 
