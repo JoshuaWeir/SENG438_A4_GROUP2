@@ -112,7 +112,7 @@ Initially, both test cases were fairly effective, as both classes had a mutation
 
 # A discussion on the effect of equivalent mutants on mutation score accuracy
 
-Equivalent mutations had a detrimental effect on our mutation coverage, thus making the score slightly inaccurate. For example, in DataUtilities, the methods implement several for-loops. In these for-loops, a common mutation was changing the loop condition from i < 10 to i != 10. The Pitest mutation tool would flag these mutations as surviving, however they are logically equivalent in the context of a for-loop, so there is no way to kill them. Mutations like this decreased our mutation coverage score in both test classes.
+Equivalent mutations had a detrimental effect on our mutation coverage, thus making the score slightly inaccurate. For example, in DataUtilities, the methods implement several for-loops. In these for-loops, a common mutation was, for example, changing the loop condition from i < 10 to i != 10. The Pitest mutation tool would flag these mutations as surviving, however they are logically equivalent in the context of a for-loop, so there is no way to kill them. Mutations like this decreased our mutation coverage score in both test classes.
 
 # A discussion of what could have been done to improve the mutation score of the test suites
 
